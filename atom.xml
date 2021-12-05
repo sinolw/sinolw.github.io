@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-05T06:46:47.428Z</updated>
+  <updated>2021-12-05T07:03:37.824Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,13 +21,12 @@
     <link href="http://example.com/2021/12/04/rotation/"/>
     <id>http://example.com/2021/12/04/rotation/</id>
     <published>2021-12-04T07:36:25.000Z</published>
-    <updated>2021-12-05T06:46:47.428Z</updated>
+    <updated>2021-12-05T07:03:37.824Z</updated>
     
     
-    <summary type="html">&lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;基于vue3手写水平无缝轮播图。&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;基于vue3手写水平无缝轮播图。&lt;/p&gt;
 &lt;p&gt;无需引入插件。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20211205141257757.png&quot; alt=&quot;image-20211205141257757&quot;&gt;&lt;/p&gt;
-&lt;h4 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h4&gt;&lt;p&gt;使用定时器通过一个动态的值去改变页面中图片的位置。&lt;/p&gt;</summary>
+&lt;h2 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h2&gt;&lt;p&gt;使用定时器通过一个动态的值去改变页面中图片的位置。&lt;/p&gt;</summary>
     
     
     

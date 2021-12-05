@@ -70,36 +70,35 @@
   <entry>
     <title>vue3 水平无缝轮播图</title>
     <url>/2021/12/04/rotation/</url>
-    <content><![CDATA[<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>基于vue3手写水平无缝轮播图。</p>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>基于vue3手写水平无缝轮播图。</p>
 <p>无需引入插件。</p>
-<p><img src="C:\Users\86186\AppData\Roaming\Typora\typora-user-images\image-20211205141257757.png" alt="image-20211205141257757"></p>
-<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>使用定时器通过一个动态的值去改变页面中图片的位置。</p>
+<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>使用定时器通过一个动态的值去改变页面中图片的位置。</p>
 <span id="more"></span>
 
-<h4 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h4><p>首先需要在reactive中定义三个变量。它们分别是</p>
+<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>首先需要在reactive中定义三个变量。它们分别是</p>
 <p>calleft(偏移量)、</p>
 <p>timer(存放定时器)、</p>
 <p>dataleng(存放动态获取的ul宽度)。</p>
 <p>当然还有dataList数组（里面存放的是img）。</p>
-<h4 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h4><pre><code>&lt;div class=&quot;threeImg&quot;&gt;
-    &lt;div class=&quot;Containt&quot;&gt;
-            &lt;ul :style=&quot;&#123; left: calleft + &#39;px&#39;,                     width: dataleng + &#39;px&#39; &#125;&quot; v-                        on:mouseover=&quot;stopmove()&quot;
-                v-on:mouseout=&quot;move()&quot;                                 class=&quot;imgBoxoul&quot;&gt;
-                &lt;li v-for=&quot;(item, index) in                             dataList&quot; :key=&quot;index&quot;                                 @click=&quot;gotodetails(item.id)&quot;                         ref=&quot;lis&quot;&gt;
+<h2 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h2><pre><code>    &lt;div class=&quot;threeImg&quot;&gt;
+        &lt;div class=&quot;Containt&quot;&gt;
+            &lt;ul :style=&quot;&#123; left: calleft + &#39;px&#39;, width: dataleng + &#39;px&#39; &#125;&quot; v-on:mouseover=&quot;stopmove()&quot;
+                v-on:mouseout=&quot;move()&quot; class=&quot;imgBoxoul&quot;&gt;
+                &lt;li v-for=&quot;(item, index) in dataList&quot; :key=&quot;index&quot; @click=&quot;gotodetails(item.id)&quot; ref=&quot;lis&quot;&gt;
                     &lt;img :src=&quot;item.thumb&quot; /&gt;
                 &lt;/li&gt;
-        &lt;/ul&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-&lt;/div&gt;
 </code></pre>
-<h4 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h4><p>按需引入</p>
+<h2 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h2><p>按需引入</p>
 <pre><code>import &#123;reactive,onMounted,toRefs&#125; from &quot;vue&quot;;
 </code></pre>
 <p>获取dom并复制</p>
-<pre><code>function imgbox() &#123;
-    var imgBox =                             document.getElementsByClassName(&quot;imgBoxoul&quot;)[0];
-            imgBox.innerHTML += imgBox.innerHTML;
-        &#125;
+<pre><code>            function imgbox() &#123;
+                var imgBox = document.getElementsByClassName(&quot;imgBoxoul&quot;)[0];
+                imgBox.innerHTML += imgBox.innerHTML;
+            &#125;
 </code></pre>
 <p>获取当前图片的长度，计算出结果之后赋值给detaleng</p>
 <pre><code>function datalen() &#123;
@@ -141,158 +140,101 @@
             move
         &#125;;
 </code></pre>
-<h4 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h4><template>
-    <div class="hello">
-        <h1></h1>
-        <div class="threeImg">
-            <div class="Containt">
-                <ul :style="{ left: calleft + 'px', width: dataleng + 'px' }" v-on:mouseover="stopmove()"
-                    v-on:mouseout="move()" class="imgBoxoul">
-                    <li v-for="(item, index) in dataList" :key="index" @click="gotodetails(item.id)" ref="lis">
-                        <img :src="item.thumb" />
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</template>
+<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code>&lt;template&gt;
+    &lt;div class=&quot;threeImg&quot;&gt;
+        &lt;div class=&quot;Containt&quot;&gt;
+            &lt;ul :style=&quot;&#123; left: calleft + &#39;px&#39;, width: dataleng + &#39;px&#39; &#125;&quot; v-on:mouseover=&quot;stopmove()&quot;
+                v-on:mouseout=&quot;move()&quot; class=&quot;imgBoxoul&quot;&gt;
+                &lt;li v-for=&quot;(item, index) in dataList&quot; :key=&quot;index&quot; @click=&quot;gotodetails(item.id)&quot; ref=&quot;lis&quot;&gt;
+                    &lt;img :src=&quot;item.thumb&quot; /&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
 
-<script>
-    import {
+&lt;script&gt;
+    import &#123;
         reactive,
         onMounted,
         toRefs
-    } from "vue";
-    export default {
-        name: "HelloWorld",
-        props: {
-            msg: String,
-        },
-        setup() {
-            const user = reactive({
+    &#125; from &quot;vue&quot;;
+    export default &#123;
+        setup() &#123;
+            const user = reactive(&#123;
                 calleft: 0,
                 timer: null,
                 dataLeng: 0,
-                dataList: [{
-                        thumb: "https://img1.baidu.com/it/u=952217981,2074570050&fm=26&fmt=auto",
+                dataList: [&#123;
+                        thumb: &quot;https://img1.baidu.com/it/u=952217981,2074570050&amp;fm=26&amp;fmt=auto&quot;,
                         id: 0,
-                    },
-                    {
-                        thumb: "https://img0.baidu.com/it/u=850200754,252620350&fm=26&fmt=auto",
+                    &#125;,
+                    &#123;
+                        thumb: &quot;https://img0.baidu.com/it/u=850200754,252620350&amp;fm=26&amp;fmt=auto&quot;,
                         id: 1,
-                    },
-                    {
-                        thumb: "https://img2.baidu.com/it/u=3618348881,1315923269&fm=26&fmt=auto",
+                    &#125;,
+                    &#123;
+                        thumb: &quot;https://img2.baidu.com/it/u=3618348881,1315923269&amp;fm=26&amp;fmt=auto&quot;,
                         id: 2,
-                    },
-                    {
-                        thumb: "https://img0.baidu.com/it/u=389679720,692929014&fm=26&fmt=auto",
+                    &#125;,
+                    &#123;
+                        thumb: &quot;https://img0.baidu.com/it/u=389679720,692929014&amp;fm=26&amp;fmt=auto&quot;,
                         id: 3,
-                    },
-                    {
-                        thumb: "https://img0.baidu.com/it/u=850200754,252620350&fm=26&fmt=auto",
+                    &#125;,
+                    &#123;
+                        thumb: &quot;https://img0.baidu.com/it/u=850200754,252620350&amp;fm=26&amp;fmt=auto&quot;,
                         id: 1,
-                    }
+                    &#125;
                 ],
-            });
+            &#125;);
 
-    <template>
-            <div class="threeImg">
-                <div class="Containt">
-                    <ul :style="{ left: calleft + 'px', width: dataleng + 'px' }" v-on:mouseover="stopmove()"
-                        v-on:mouseout="move()" class="imgBoxoul">
-                        <li v-for="(item, index) in dataList" :key="index" @click="gotodetails(item.id)" ref="lis">
-                            <img :src="item.thumb" />
-                        </li>
-                    </ul>
-                </div>
-            </div>
-    </template>
-    <script>
-        import {
-            reactive,
-            onMounted,
-            toRefs
-        } from "vue";
-        export default {
-            setup() {
-                const user = reactive({
-                    calleft: 0,
-                    timer: null,
-                    dataLeng: 0,
-                    dataList: [{
-                            thumb: "https://img1.baidu.com/it/u=952217981,2074570050&fm=26&fmt=auto",
-                            id: 0,
-                        },
-                        {
-                            thumb: "https://img0.baidu.com/it/u=850200754,252620350&fm=26&fmt=auto",
-                            id: 1,
-                        },
-                        {
-                            thumb: "https://img2.baidu.com/it/u=3618348881,1315923269&fm=26&fmt=auto",
-                            id: 2,
-                        },
-                        {
-                            thumb: "https://img0.baidu.com/it/u=389679720,692929014&fm=26&fmt=auto",
-                            id: 3,
-                        },
-                        {
-                            thumb: "https://img0.baidu.com/it/u=850200754,252620350&fm=26&fmt=auto",
-                            id: 1,
-                        }
-                    ],
-                });
-    
-    function imgbox() {
-                var imgBox = document.getElementsByClassName("imgBoxoul")[0];
+            function imgbox() &#123;
+                var imgBox = document.getElementsByClassName(&quot;imgBoxoul&quot;)[0];
                 imgBox.innerHTML += imgBox.innerHTML;
-            }
-    
-            function move() {
-                user.timer = setInterval(()=>{
+            &#125;
+
+            function move() &#123;
+                user.timer = setInterval(() =&gt; &#123;
                     starmove()
-                },20)
-                // setInterval(starmove, 20);
-            }
-    
-            function datalen() {
+                &#125;, 20)
+            &#125;
+
+            function datalen() &#123;
                 user.dataleng = 240 * Number(user.dataList.length * 2);
-            }
-            function starmove() {
-                user.calleft -= 1.2; 
-                if (user.calleft <= -1200 + -24) {
+            &#125;
+
+            function starmove() &#123;
+                user.calleft -= 1.2;
+                if (user.calleft &lt;= -1200 + -24) &#123;
                     user.calleft = -23;
-                }
-            }
-            function stopmove() {
+                &#125;
+            &#125;
+
+            function stopmove() &#123;
                 clearInterval(user.timer);
-            }
-            onMounted(() => {
+            &#125;
+
+            onMounted(() =&gt; &#123;
                 move();
                 imgbox();
                 datalen();
-            });
-            
-            return {
+            &#125;);
+
+            return &#123;
                 ...toRefs(user),
                 stopmove,
                 move
-            };
-        },
-    };
-    </script>
+            &#125;;
+        &#125;,
+    &#125;;
+&lt;/script&gt;
 
-
-<style scoped>
-    .threeImg {
+&lt;style scoped&gt;
+    .threeImg &#123;
         position: relative;
-    }
+    &#125;
 
-    <style scoped>
-        .threeImg {
-            position: relative;
-        }
-    .threeImg .Containt ul {
+    .threeImg .Containt ul &#123;
         margin: 0 auto;
         width: 2400px;
         position: absolute;
@@ -300,9 +242,9 @@
         cursor: pointer;
         height: 100%;
         z-index: 10;
-    }
-    
-    .threeImg .Containt ul li {
+    &#125;
+
+    .threeImg .Containt ul li &#123;
         float: left;
         width: 220px;
         height: 350px;
@@ -310,14 +252,14 @@
         border-radius: 10px;
         overflow: hidden;
         background-color: #ffffff;
-    }
-    
-    .threeImg .Containt ul li img {
+    &#125;
+
+    .threeImg .Containt ul li img &#123;
         width: 100%;
         height: 263px;
-    }
-    
-    .Containt {
+    &#125;
+
+    .Containt &#123;
         position: relative;
         padding: 60px 0;
         overflow-y: auto;
@@ -325,8 +267,10 @@
         height: 365px;
         overflow: hidden;
         margin: 0 auto;
-    }
-    </style>
+    &#125;
+&lt;/style&gt;
+</code></pre>
+<p></style></p>
 ]]></content>
       <tags>
         <tag>vue3轮播图</tag>
