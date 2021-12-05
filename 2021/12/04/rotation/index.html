@@ -67,17 +67,17 @@
       
       
       
-      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>基于vue3手写水平无缝轮播图。</p>
+      <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>基于vue3手写水平无缝轮播图。</p>
 <p>无需引入插件。</p>
-<h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>使用定时器通过一个动态的值去改变页面中图片的位置。</p>
+<h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><p>使用定时器通过一个动态的值去改变页面中图片的位置。</p>
 <span id="more"></span>
 
-<h2 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h2><p>首先需要在reactive中定义三个变量。它们分别是</p>
+<h3 id="定义变量"><a href="#定义变量" class="headerlink" title="定义变量"></a>定义变量</h3><p>首先需要在reactive中定义三个变量。它们分别是</p>
 <p>calleft(偏移量)、</p>
 <p>timer(存放定时器)、</p>
 <p>dataleng(存放动态获取的ul宽度)。</p>
 <p>当然还有dataList数组（里面存放的是img）。</p>
-<h2 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h2><pre><code>    &lt;div class=&quot;threeImg&quot;&gt;
+<h3 id="模板渲染"><a href="#模板渲染" class="headerlink" title="模板渲染"></a>模板渲染</h3><pre><code>    &lt;div class=&quot;threeImg&quot;&gt;
         &lt;div class=&quot;Containt&quot;&gt;
             &lt;ul :style=&quot;&#123; left: calleft + &#39;px&#39;, width: dataleng + &#39;px&#39; &#125;&quot; v-on:mouseover=&quot;stopmove()&quot;
                 v-on:mouseout=&quot;move()&quot; class=&quot;imgBoxoul&quot;&gt;
@@ -88,7 +88,7 @@
         &lt;/div&gt;
     &lt;/div&gt;
 </code></pre>
-<h2 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h2><p>按需引入</p>
+<h3 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h3><p>按需引入</p>
 <pre><code>import &#123;reactive,onMounted,toRefs&#125; from &quot;vue&quot;;
 </code></pre>
 <p>获取dom并复制</p>
@@ -137,7 +137,7 @@
             move
         &#125;;
 </code></pre>
-<h2 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h2><pre><code>&lt;template&gt;
+<h3 id="完整代码"><a href="#完整代码" class="headerlink" title="完整代码"></a>完整代码</h3><pre><code>&lt;template&gt;
     &lt;div class=&quot;threeImg&quot;&gt;
         &lt;div class=&quot;Containt&quot;&gt;
             &lt;ul :style=&quot;&#123; left: calleft + &#39;px&#39;, width: dataleng + &#39;px&#39; &#125;&quot; v-on:mouseover=&quot;stopmove()&quot;
@@ -272,7 +272,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/04/rotation/" data-id="ckwt2wcie00004kw19rgvarz9" class="article-share-link">
+      <a data-url="http://example.com/2021/12/04/rotation/" data-id="ckwt2z61x00034sw15z6n5eco" class="article-share-link">
         分享
       </a>
       
