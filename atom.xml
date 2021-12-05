@@ -40,10 +40,10 @@
     <link href="http://example.com/2021/12/02/hello-world/"/>
     <id>http://example.com/2021/12/02/hello-world/</id>
     <published>2021-12-01T16:00:00.000Z</published>
-    <updated>2021-12-05T06:05:53.631Z</updated>
+    <updated>2021-12-05T10:04:31.647Z</updated>
     
     
-    <summary type="html">&lt;h4 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h4&gt;&lt;p&gt;记录一下自己头一次真正使用typora写文章，此时小编的心情很是激动。&lt;/p&gt;
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;记录一下自己头一次真正使用typora写文章，此时小编的心情很是激动。&lt;/p&gt;
 &lt;p&gt;小编的博客是使用的hexo博客系统搭建的。&lt;/p&gt;
 &lt;p&gt;为什么要使用Hexo呢，很简单因为方便快捷并且不需要成本（不需要服务器、域名等）。&lt;/p&gt;
 &lt;p&gt;话不多说，请往下看。&lt;/p&gt;</summary>
