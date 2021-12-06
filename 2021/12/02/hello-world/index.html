@@ -28,6 +28,7 @@
 
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="sinolw" type="application/atom+xml">
 </head>
+
 <body>
   <main class="content">
     <section class="outer">
@@ -130,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/02/hello-world/" data-id="ckwt2z60300004sw18afjc5rb" class="article-share-link">
+      <a data-url="http://example.com/2021/12/02/hello-world/" data-id="ckwukhhrn0000psw10de84bsm" class="article-share-link">
         分享
       </a>
       
@@ -161,6 +162,32 @@
   
   
   
+<div class="gitalk" id="gitalk-container"></div>
+
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+
+
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '8f1083f3b76ad4e9450c',
+    clientSecret: 'e1ec607d9a13dda6deeefde50a7e68cc48a06ccf',
+    repo: 'new-Gitalk',
+    owner: 'sinolw',
+    admin: ['95402683'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
   
 
 </article>
