@@ -131,7 +131,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/12/02/hello-world/" data-id="ckwukmqhc0000s0w17f3ebo3k" class="article-share-link">
+      <a data-url="http://example.com/2021/12/02/hello-world/" data-id="ckwulodvm0000fww1dhok0rpr" class="article-share-link">
         分享
       </a>
       
@@ -179,10 +179,10 @@
     repo: 'new-Gitalk',
     owner: 'sinolw',
     admin: ['95402683'],
-    // id: location.pathname,      // Ensure uniqueness and length less than 50
-    id: md5(location.pathname),
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    // id: md5(location.pathname),
     distractionFreeMode: false,  // Facebook-like distraction free mode
-    pagerDirection: 'last'
+    // pagerDirection: 'last'
   })
 
   gitalk.render('gitalk-container')
